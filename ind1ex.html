@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For You 🤍</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+
+  <header class="topbar">
+    <div class="left">
+      <span class="dot"></span>
+      <span class="brand" id="brand">For You</span>
+    </div>
+
+    <div class="right">
+      <button id="musicBtn" class="pillBtn">Play Music ♪</button>
+      <button id="goNote" class="pillBtn ghost">Small Note</button>
+    </div>
+  </header>
+
+  <!-- Put your audio file in the same folder as: dimensions.mp3 -->
+  <audio id="bgm" preload="auto" loop>
+    <source src="dimensions.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Slide container (works on phone + PC) -->
+  <main class="slides" id="slides">
+    <!-- Slide 1 -->
+    <section class="slide">
+      <div class="card glass">
+        <div class="tag">🤍 Fight • Fix • Stay</div>
+
+        <h1 class="title">
+          Every moment with <span class="accent">you</span> is a treasure.
+        </h1>
+
+        <p class="sub" id="subtext">
+          <!-- injected by JS -->
+        </p>
+
+        <div class="mascot" aria-hidden="true">
+          <div class="bunny">
+            <div class="ear ear-l"></div>
+            <div class="ear ear-r"></div>
+            <div class="head">
+              <div class="eye eye-l"></div>
+              <div class="eye eye-r"></div>
+              <div class="nose"></div>
+              <div class="cheek cheek-l"></div>
+              <div class="cheek cheek-r"></div>
+            </div>
+            <div class="body"></div>
+            <div class="paw paw-l"></div>
+            <div class="paw paw-r"></div>
+          </div>
+
+          <div class="bubble">tap anywhere for hearts 🤍</div>
+        </div>
+
+        <div class="btnRow">
+          <button id="heartBtn" class="btn primary">Send a Heart 🤍</button>
+          <button id="wishBtn" class="btn glassBtn">Tiny Wish ✨</button>
+        </div>
+
+        <div class="wishBox glass" id="wishBox" aria-live="polite">
+          <div class="wishTitle">Tiny wish</div>
+          <div class="wishText" id="wishText">Tap “Tiny Wish” ✨</div>
+        </div>
+
+        <div class="hint">Swipe up (or scroll) for the note ↓</div>
+
+        <footer class="foot">
+          <span id="fromLine">— from Hour</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <div class="card glass noteCard">
+        <div class="noteTop">
+          <div class="noteTitle">A small note 💌</div>
+          <button id="backHome" class="pillBtn ghost">Back</button>
+        </div>
+
+        <p class="quote">“In a crowd, my eyes just naturally find you.”</p>
+
+        <div class="noteText">
+          <p>
+            I’m not trying to rush anything. I just wanna appreciate what we have built
+            and both of our future goals.
+          </p>
+          <p>
+            I just have a calm wish for you:
+            <b>health, peace, and a strong mind</b> for BAC and everything else.
+          </p>
+        </div>
+
+        <div class="btnRow">
+          <button id="moreHeartsBtn" class="btn primary">More Hearts ✨</button>
+          <button id="copyBtn" class="btn glassBtn">Copy message 📩</button>
+        </div>
+
+        <div class="small">
+          Tip: If music doesn’t autoplay, press <b>Play Music</b> once (phones block autoplay).
+        </div>
+
+        <div class="sign">Forever… Be....?</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
